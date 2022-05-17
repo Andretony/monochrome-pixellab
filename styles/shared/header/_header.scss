@@ -1,0 +1,12 @@
+.header {
+  &-secondary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

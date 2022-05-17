@@ -1,1 +1,24 @@
 @import './fonts';
+
+//fontawesome
+@import './../node_modules/@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+//~ este alias ptr node_modules
+
+//bootstrap
+@import './../node_modules/bootstrap/scss/bootstrap-reboot.scss';
+@import './../node_modules/bootstrap/scss/bootstrap-grid.scss';
+@import './../node_modules/bootstrap/scss/bootstrap-utilities.scss';
+//@import './../node_modules/bootstrap/scss/images';
+
+@import 'variables';
+
+@import './shared/index';
+
+@import './reset';
+
+body {
+  font-family: 'Playfair Display', 'Roman';
+}
