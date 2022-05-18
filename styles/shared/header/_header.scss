@@ -3,10 +3,31 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
+    div:nth-of-type(2) {
+      font-size: 19px;
+      padding-left: 25px;
+      padding-top: 0;
+      align-self: center;
+      font-family: Baskerville Old Face BQ, regular;
+      text-transform: uppercase;
+    }
     ul {
       display: flex;
       flex-direction: row;
+      gap: 25px;
+      padding-right: 25px;
+      padding-top: 2px;
+    }
+  }
+
+  &-controls {
+    .fa-solid {
+      font-size: x-large;
+    }
+    .fa-regular {
+      font-size: x-large;
     }
   }
 }
