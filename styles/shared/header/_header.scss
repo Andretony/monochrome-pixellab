@@ -1,33 +1,101 @@
 .header {
   &-secondary {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    padding-top: 19px;
+
+    .header-title {
+      grid-column: 1 / span 1;
+      grid-row: 1 / span 1;
+      align-self: center;
+      justify-self: start;
+    }
+
+    .header-controls {
+      grid-column: 2 / -1;
+      grid-row: 1 / span 1;
+
+      .header-search {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        border: 1px solid $gray-primary;
+        button {
+          border: none;
+          background: none;
+        }
+        input {
+          border: none;
+        }
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        flex-direction: row;
+        gap: 25px;
+      }
+    }
 
     div:nth-of-type(2) {
       font-size: 19px;
-      padding-left: 25px;
-      padding-top: 0;
+      padding-left: 18px;
       align-self: center;
       font-family: Baskerville Old Face BQ, regular;
       text-transform: uppercase;
     }
+
     ul {
       display: flex;
-      flex-direction: row;
+      justify-content: flex-end;
       gap: 25px;
-      padding-right: 25px;
-      padding-top: 2px;
+      padding-right: 37px;
     }
   }
 
-  &-controls {
-    .fa-solid {
-      font-size: x-large;
+  &-bottom {
+    .header-primary {
+      background: $brand-primary 0% 0% no-repeat padding-box;
     }
-    .fa-regular {
-      font-size: x-large;
+    button {
+      border: none;
+      background: none;
+    }
+    input {
+      border: none;
+      background: none;
     }
   }
 }
+
+// .header {
+//   &-secondary {
+//     display: flex;
+//     flex-direction: row;
+//     justify-content: space-between;
+//     align-items: center;
+//     padding-top: 18px;
+
+//     div:nth-of-type(2) {
+//       font-size: 19px;
+//       padding-left: 18px;
+//       align-self: center;
+//       font-family: Baskerville Old Face BQ, regular;
+//       text-transform: uppercase;
+//     }
+//     ul {
+//       display: flex;
+//       flex-direction: row;
+//       gap: 25px;
+//       padding-right: 37px;
+//     }
+//   }
+
+//   &-controls {
+//     .fa-solid {
+//       font-size: large;
+//     }
+//     .fa-regular {
+//       font-size: large;
+//     }
+//   }
+// }
