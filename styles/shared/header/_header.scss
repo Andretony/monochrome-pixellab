@@ -54,15 +54,45 @@
 
   &-bottom {
     .header-primary {
-      background: $brand-primary 0% 0% no-repeat padding-box;
+      background: $brand-primary no-repeat padding-box;
+      width: 375px;
+      height: 50px;
+
+      ul {
+        display: flex;
+        justify-content: space-between;
+        /* padding-left: 34.5px; */
+        color: white;
+        gap: 52.53px;
+        align-items: center;
+        padding-top: 10px;
+        padding-left: 34.5px;
+        padding-right: 34.5px;
+
+        li:last-child {
+          display: grid;
+          border: 0.2px solid $gray-primary;
+          font-size: 10px;
+          width: 227px;
+          height: 30px;
+        }
+      }
     }
+
+    .banner-main {
+      background: url('/public/images/banner/banner-02.png') no-repeat center
+        center / cover;
+    }
+
     button {
       border: none;
       background: none;
+      color: $gray-primary;
     }
     input {
       border: none;
       background: none;
+      color: $gray-primary;
     }
   }
 }
